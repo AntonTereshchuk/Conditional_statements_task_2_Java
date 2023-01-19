@@ -8,6 +8,7 @@ public class Main {
 		
 		Scanner sc = new Scanner(System.in);
 		int flatNumberInTheHouse;
+		int flatNumberInTheEntrance;
 		int floorNumber;
 		int entranceNumber;
 		int flatsInTheEntrance = 36;
@@ -27,12 +28,12 @@ public class Main {
 				entranceNumber = flatNumberInTheHouse / flatsInTheEntrance;
 			}
 									
-			flatNumberInTheHouse = flatNumberInTheHouse - (entranceNumber - 1) * flatsInTheEntrance;
+			flatNumberInTheEntrance = flatNumberInTheHouse - (entranceNumber - 1) * flatsInTheEntrance;
 						
-			if (flatNumberInTheHouse % 4 > 0) {
-				floorNumber = flatNumberInTheHouse / 4 + 1;
+			if (flatNumberInTheEntrance % 4 > 0) {
+				floorNumber = flatNumberInTheEntrance / 4 + 1;
 			} else {
-				floorNumber = flatNumberInTheHouse / 4;
+				floorNumber = flatNumberInTheEntrance / 4;
 			}
 			
 			System.out.println("The flat in the entrance № " +  entranceNumber + " on the floor № " + floorNumber);
